@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>数据对象规格说明 | Betterlife 学习手册</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="The book of betterlife framework">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.7fad836b.css" as="style"><link rel="preload" href="/assets/js/app.0e326778.js" as="script"><link rel="preload" href="/assets/js/2.79313a8d.js" as="script"><link rel="preload" href="/assets/js/36.11c1e9b4.js" as="script"><link rel="prefetch" href="/assets/js/10.e919564c.js"><link rel="prefetch" href="/assets/js/11.57c53c1d.js"><link rel="prefetch" href="/assets/js/12.2dd9d0b6.js"><link rel="prefetch" href="/assets/js/13.72acf1aa.js"><link rel="prefetch" href="/assets/js/14.1ec61390.js"><link rel="prefetch" href="/assets/js/15.1af85902.js"><link rel="prefetch" href="/assets/js/16.e8b60c86.js"><link rel="prefetch" href="/assets/js/17.988ee59a.js"><link rel="prefetch" href="/assets/js/18.18667be7.js"><link rel="prefetch" href="/assets/js/19.38cb53ad.js"><link rel="prefetch" href="/assets/js/20.6dc9022b.js"><link rel="prefetch" href="/assets/js/21.1dd6d819.js"><link rel="prefetch" href="/assets/js/22.5da28586.js"><link rel="prefetch" href="/assets/js/23.70574177.js"><link rel="prefetch" href="/assets/js/24.c4a2dedb.js"><link rel="prefetch" href="/assets/js/25.0925cdaf.js"><link rel="prefetch" href="/assets/js/26.dad01563.js"><link rel="prefetch" href="/assets/js/27.f7c3bc83.js"><link rel="prefetch" href="/assets/js/28.3b5cb38e.js"><link rel="prefetch" href="/assets/js/29.c7da3728.js"><link rel="prefetch" href="/assets/js/3.06c76f20.js"><link rel="prefetch" href="/assets/js/30.c148e416.js"><link rel="prefetch" href="/assets/js/31.5509fb5d.js"><link rel="prefetch" href="/assets/js/32.035caf56.js"><link rel="prefetch" href="/assets/js/33.f74d4676.js"><link rel="prefetch" href="/assets/js/34.8aa9531c.js"><link rel="prefetch" href="/assets/js/35.143240ca.js"><link rel="prefetch" href="/assets/js/37.dd89d0b5.js"><link rel="prefetch" href="/assets/js/38.ce1a9dcc.js"><link rel="prefetch" href="/assets/js/39.29058f39.js"><link rel="prefetch" href="/assets/js/4.633e8bf1.js"><link rel="prefetch" href="/assets/js/40.2d05d2eb.js"><link rel="prefetch" href="/assets/js/41.7a9dd7cb.js"><link rel="prefetch" href="/assets/js/42.fca47b18.js"><link rel="prefetch" href="/assets/js/43.a5dc5b99.js"><link rel="prefetch" href="/assets/js/44.83c7508b.js"><link rel="prefetch" href="/assets/js/45.00a05ce0.js"><link rel="prefetch" href="/assets/js/46.f3852936.js"><link rel="prefetch" href="/assets/js/47.d1bba1da.js"><link rel="prefetch" href="/assets/js/48.af4223d0.js"><link rel="prefetch" href="/assets/js/49.e7d5a706.js"><link rel="prefetch" href="/assets/js/5.c19791fa.js"><link rel="prefetch" href="/assets/js/50.3951228d.js"><link rel="prefetch" href="/assets/js/51.28574e33.js"><link rel="prefetch" href="/assets/js/52.11e0376e.js"><link rel="prefetch" href="/assets/js/53.f8017839.js"><link rel="prefetch" href="/assets/js/54.7ac48a4b.js"><link rel="prefetch" href="/assets/js/55.4ce4b883.js"><link rel="prefetch" href="/assets/js/56.dac53ff3.js"><link rel="prefetch" href="/assets/js/57.37372255.js"><link rel="prefetch" href="/assets/js/58.d5f93fe2.js"><link rel="prefetch" href="/assets/js/59.5dd66b56.js"><link rel="prefetch" href="/assets/js/6.307cc781.js"><link rel="prefetch" href="/assets/js/60.4a655187.js"><link rel="prefetch" href="/assets/js/61.1fc3cba4.js"><link rel="prefetch" href="/assets/js/62.f9539ba0.js"><link rel="prefetch" href="/assets/js/63.42bf63d5.js"><link rel="prefetch" href="/assets/js/64.e087bd9b.js"><link rel="prefetch" href="/assets/js/65.03a93995.js"><link rel="prefetch" href="/assets/js/66.a29eb216.js"><link rel="prefetch" href="/assets/js/7.15b68a76.js"><link rel="prefetch" href="/assets/js/8.feba17cb.js"><link rel="prefetch" href="/assets/js/9.82d72a56.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7fad836b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Betterlife 学习手册</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/index/" class="nav-link">
+  介绍
+</a></div><div class="nav-item"><a href="/core/" class="nav-link router-link-active">
+  教程
+</a></div><div class="nav-item"><a href="/ace/" class="nav-link">
+  高级
+</a></div><div class="nav-item"><a href="/deploy/" class="nav-link">
+  部署
+</a></div> <a href="https://github.com/skygreen2001/betterlife.book" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/index/" class="nav-link">
+  介绍
+</a></div><div class="nav-item"><a href="/core/" class="nav-link router-link-active">
+  教程
+</a></div><div class="nav-item"><a href="/ace/" class="nav-link">
+  高级
+</a></div><div class="nav-item"><a href="/deploy/" class="nav-link">
+  部署
+</a></div> <a href="https://github.com/skygreen2001/betterlife.book" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/core/" aria-current="page" class="sidebar-link">框架核心</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>原型设计</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>数据对象</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/core/dataobject/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/core/dataobject/dataobjectspec.html" aria-current="page" class="active sidebar-link">规格说明</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/core/dataobject/dataobjectspec.html#概述" class="sidebar-link">概述</a></li><li class="sidebar-sub-header"><a href="/core/dataobject/dataobjectspec.html#详细说明" class="sidebar-link">详细说明</a></li><li class="sidebar-sub-header"><a href="/core/dataobject/dataobjectspec.html#更多说明" class="sidebar-link">更多说明</a></li><li class="sidebar-sub-header"><a href="/core/dataobject/dataobjectspec.html#项目默认配置统一调整" class="sidebar-link">项目默认配置统一调整</a></li></ul></li><li><a href="/core/dataobject/normalmethod.html" class="sidebar-link">通用方法</a></li><li><a href="/core/dataobject/dataobjectdetail.html" class="sidebar-link">详细说明</a></li><li><a href="/core/dataobject/dataobjectsample.html" class="sidebar-link">示例</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工具集</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>框架MVC</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>系统工具</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="数据对象规格说明"><a href="#数据对象规格说明" class="header-anchor">#</a> 数据对象规格说明</h1> <h2 id="概述"><a href="#概述" class="header-anchor">#</a> 概述</h2> <ul><li><p>数据对象除了属性和方法的定义, 还有更多高级定义方式</p></li> <li><p>其实现数据对象的关系定义主要放置在类<code>DataObjectSpec</code>里<code>DataObjectRelation</code>里</p></li> <li><p>DataObjectSpec</p> <ul><li>路径   : core/model/dataobject/</li> <li>文件名称: DataObjectSpec.php</li></ul></li> <li><p>DataObjectRelation</p> <ul><li>路径   : core/model/dataobject/</li> <li>文件名称: DataObjectRelation.php</li></ul></li> <li><p>数据对象的规格说明默认定义变量如下:</p> <ol><li>$field_spec       : 列规格定义说明</li> <li>$has_one          : 一对一关系说明</li> <li>$belong_has_one   : 从属一对一关系说明</li> <li>$has_many         : 一对多关系说明</li> <li>$many_many        : 多对多关系说明</li> <li>$belongs_many_many: 从属于多对多关系说明</li></ol></li> <li><p>除第一个变量用于列规格说明外, 其它变量都用于表[类]关系说明;</p></li> <li><p>第一个变量为实例变量,其他关系变量都定义为静态类变量;</p></li> <li><p>一般情况下数据对象无需定义规格说明,定义了规格说明以后, 利用框架内置的规格说明实现功能, 可以轻而易举实现很多功能, 这在后面会进一步详细说明;</p></li> <li><p>通过代码生成数据对象类说明的时候,会自动生成相应的数据对象的规格说明配置变量;</p></li> <li><p>如果未按照<a href="/core/database/">数据库原型设计规范</a>定义数据库, 则需要按本文说明手动配置数据对象的规格说明配置变量。</p></li></ul> <h2 id="详细说明"><a href="#详细说明" class="header-anchor">#</a> 详细说明</h2> <h3 id="field-spec-列规格定义说明"><a href="#field-spec-列规格定义说明" class="header-anchor">#</a> $field_spec:列规格定义说明</h3> <ul><li><p>数据对象定义需定义字段: public $field_spec, 它定义了当前数据对象的列规格说明。</p></li> <li><p>定义形式如下:</p> <div class="language- extra-class"><pre class="language-text"><code>public $field_spec = array(
+    EnumColumnNameDefault::ID         =&gt; 'id',
+    EnumColumnNameDefault::COMMITTIME =&gt; 'publishTime',
+    EnumDataSpec::REMOVE              =&gt; array(
+        'updateTime'
+    ),
+    EnumDataSpec::MANY_MANY_TABLE     =&gt; array(
+        // 多对多关系类名 =&gt; 多对多关系表名
+    ),
+    EnumDataSpec::FOREIGN_ID =&gt; array(
+        // 类名 =&gt; 外键名
+        // 实例对象名 =&gt; 外键名[在从属于一对一关系类名中经常遇到, 比如家庭地址中省|市|区都关联同一个类:地区；需要用实例对象名]
+    )
+);
+</code></pre></div></li></ul> <h4 id="基本定义"><a href="#基本定义" class="header-anchor">#</a> 基本定义</h4> <ul><li><p>在数据对象的列规格里</p> <ol><li>$key-&gt;$value说明是: DataObject默认列名-&gt;列别名。</li></ol> <p>它主要用于与第三方WEB应用整合时, 可能数据对象表唯一标识定义为$table_id,如用户表的唯一标识是: user_id;</p> <p>在框架中设计当列名有别名时, 以列别名去表中查找相应列。</p> <ol start="2"><li>remove:在数据对象中移除不需要持久化的列。</li></ol> <p>如数据对象中不需要列commitTime或者updateTime数据列时, 只需要在其中声明, 其中声明的列即不在框架的持久层中进行存储。</p> <ol start="3"><li>many_many_table:多对多关系表名称定义, 如无定义, 则按默认规则查找指定表。</li></ol> <ul><li><p>多对多表名默认规则:</p> <ul><li>多对多【主控端-即定义为$many_many】:数据库表名前缀+“<em>”+[文件夹目录+“</em>”]...+TABLENAME_RELATION+&quot;_&quot;+主表名+关系表名。</li> <li>如User和Role是多对多关系, 数据库表名前缀为bb,文件夹目录是user,TABLENAME_RELATION是re；那么在User里定义$many_many包含:Role;则对应的表名是: bb_user_re_userrole.</li> <li>多对多【从属端-即定义为$belongs_many_many】:数据库表名前缀+“<em>”+[文件夹目录+“</em>”]...+TABLENAME_RELATION+&quot;_&quot;+关系表名+主表名。</li> <li>如User和Role是多对多关系, 数据库表名前缀为bb,文件夹目录是user,TABLENAME_RELATION是re；那么在Role里定义$belongs_many_many包含:User;则对应的表名是:bb_user_re_userrole.</li></ul></li></ul> <ol start="4"><li>foreign_id: 在对象之间或者说表之间存在一对一, 一对多, 多对多的关系时, 可通过它指定外键的名称, 如果没有指定, 则按默认定义。</li></ol> <ul><li><p>外键的名称默认定义:</p> <ul><li><p>一对一:【关系表类名+&quot;_&quot;+id】；注意关系表类名头字母小写</p> <ul><li>如UserDetail和User是一对一关系, 则在UserDetail中对应User的外键就是: user_id。</li> <li>在User中定义<code>$has_one</code>是UserDetail, 在UserDetail定义<code>$belong_has_one</code>是User</li></ul></li> <li><p>一对多:【关系表类名+&quot;_&quot;+id】；注意关系表类名头字母小写</p> <ul><li>如Department和User是一对多关系, 则在User中对应Department的外键就是: department_id</li> <li>在User中定义<code>$belong_has_one</code>是Department, 在Department中定义<code>$has_many</code>是User。</li></ul></li> <li><p>多对多【主控端】:多对多关系会产生一张中间表,它定义在EnumDataSpec::MANY_MANY_TABLE里,</p> <ul><li>注意表类名头字母小写。</li> <li>主表类外键名称: 【主表类名+&quot;<em>&quot;+id】, 关系表类外键名称: 【关系表类名+&quot;</em>&quot;+id】</li></ul></li> <li><p>多对多【从属端】:多对多关系会产生一张中间表,它定义在EnumDataSpec::MANY_MANY_TABLE里,</p> <ul><li>注意表类名头字母小写。</li> <li>主表类外键名称: 【主表类名+&quot;<em>&quot;+id】, 关系表类外键名称: 【关系表类名+&quot;</em>&quot;+id】</li></ul></li></ul></li></ul></li> <li><p>说明: $field_spec_default为默认的数据对象的列规格说明, 它全局的定义了当前应用的列规格说明；</p></li></ul> <h4 id="示例说明"><a href="#示例说明" class="header-anchor">#</a> 示例说明</h4> <ul><li><p>示例1:用户详细信息定义列规格说明如下:</p> <div class="language- extra-class"><pre class="language-text"><code>public $field_spec = array(
+    EnumDataSpec::FOREIGN_ID =&gt; array(
+        'country_r'  =&gt; &quot;country&quot;,
+        &quot;province_r&quot; =&gt; &quot;province&quot;,
+        &quot;city_r&quot;     =&gt; &quot;city&quot;,
+        'district_r' =&gt; &quot;district&quot;
+    )
+);
+</code></pre></div></li> <li><p>示例2:用户角色列规格说明如下:</p> <div class="language- extra-class"><pre class="language-text"><code>public $field_spec = array(
+    EnumDataSpec::REMOVE =&gt; array(
+        'commitTime',
+        'updateTime'
+    )
+);
+</code></pre></div></li></ul> <h3 id="has-one-一对一关系说明"><a href="#has-one-一对一关系说明" class="header-anchor">#</a> $has_one:一对一关系说明</h3> <h4 id="基本定义-2"><a href="#基本定义-2" class="header-anchor">#</a> 基本定义</h4> <ul><li>相对于<a href="/core/database/database_define.html">数据库定义</a>, 表关系定义: 一对一[has_one]</li> <li>例如示例项目中
+<ul><li>主数据对象:User</li> <li>从数据对象:Userdetail</li> <li>用户[主数据对象]和用户详情[从数据对象]就是一对一关系</li></ul></li></ul> <h4 id="示例说明-2"><a href="#示例说明-2" class="header-anchor">#</a> 示例说明</h4> <ul><li><p>定义示例:</p> <div class="language- extra-class"><pre class="language-text"><code>class User extends DataObject {
+    static $has_one = array(
+        &quot;userDetail&quot; =&gt; &quot;UserDetail&quot;,
+    );
+</code></pre></div></li> <li><p>调用示例:</p> <div class="language- extra-class"><pre class="language-text"><code>$user       = User::getById( 1 );
+$userdetail = $user-&gt;userdetail;
+print_r($userdetail);
+</code></pre></div></li></ul> <h3 id="belong-has-one-从属一对一关系说明"><a href="#belong-has-one-从属一对一关系说明" class="header-anchor">#</a> $belong_has_one:从属一对一关系说明</h3> <h4 id="基本定义-3"><a href="#基本定义-3" class="header-anchor">#</a> 基本定义</h4> <ul><li><p>相对于<a href="/core/database/database_define.html">数据库定义</a>, 表关系定义:从属于一对一[belong_has_one]</p></li> <li><p>例如示例项目中</p> <ul><li>主数据对象: User</li> <li>从数据对象: Userdetail</li> <li>用户详情[从数据对象]和用户[主数据对象]就是从属于一对一关系</li></ul></li></ul> <h4 id="示例说明-3"><a href="#示例说明-3" class="header-anchor">#</a> 示例说明</h4> <ul><li><p>定义示例:</p> <div class="language- extra-class"><pre class="language-text"><code>class Userdetail extends DataObject {
+    static $belongs_has_one = array(
+        &quot;user&quot; =&gt; &quot;User&quot;
+    );
+</code></pre></div></li> <li><p>调用示例:</p> <div class="language- extra-class"><pre class="language-text"><code>$userdetail = Userdetail::getById( 1 );
+$user       = $userdetail-&gt;user;
+print_r($user);
+</code></pre></div></li></ul> <h3 id="has-many-一对多关系说明"><a href="#has-many-一对多关系说明" class="header-anchor">#</a> $has_many:一对多关系说明</h3> <h4 id="基本定义-4"><a href="#基本定义-4" class="header-anchor">#</a> 基本定义</h4> <ul><li><p>相对于<a href="/core/database/database_define.html">数据库定义</a>, 一对多[has_many]</p></li> <li><p>例如示例项目中</p> <ul><li>主数据对象:Blog</li> <li>从数据对象:Comment</li> <li>博客[主数据对象]和评论[从数据对象]就是一对多关系</li></ul></li></ul> <h4 id="示例说明-4"><a href="#示例说明-4" class="header-anchor">#</a> 示例说明</h4> <ul><li><p>定义示例:</p> <div class="language- extra-class"><pre class="language-text"><code>class Blog extends DataObject {
+    static $has_many = array(
+        &quot;comments&quot; =&gt; &quot;Comment&quot;,
+    );
+</code></pre></div></li> <li><p>调用示例:</p> <div class="language- extra-class"><pre class="language-text"><code>$blog     = Blog::getById( 1 );
+$comments = $blog-&gt;comments;
+print_r($comments);
+</code></pre></div></li></ul> <h3 id="many-many-多对多关系说明"><a href="#many-many-多对多关系说明" class="header-anchor">#</a> $many_many:多对多关系说明</h3> <h4 id="基本定义-5"><a href="#基本定义-5" class="header-anchor">#</a> 基本定义</h4> <ul><li><p>相对于<a href="/core/database/database_define.html">数据库定义</a>, 多对多[many_many]</p></li> <li><p>例如示例项目中</p> <ul><li>主数据对象:User</li> <li>从数据对象:Role</li> <li>多对多关系数据对象:Userrole</li> <li>用户[主数据对象]和角色[从数据对象]就是多对多关系</li></ul></li></ul> <h4 id="示例说明-5"><a href="#示例说明-5" class="header-anchor">#</a> 示例说明</h4> <ul><li>定义示例:<div class="language- extra-class"><pre class="language-text"><code>class User extends DataObject {
+    static $many_many = array(
+        &quot;roles&quot; =&gt; &quot;Role&quot;,
+    );
+</code></pre></div></li> <li>调用示例:<div class="language- extra-class"><pre class="language-text"><code>$user  = User::getById( 1 );
+$roles = $user-&gt;roles;
+print_r($roles);
+</code></pre></div></li></ul> <h3 id="belongs-many-many-从属于多对多关系说明"><a href="#belongs-many-many-从属于多对多关系说明" class="header-anchor">#</a> $belongs_many_many:从属于多对多关系说明</h3> <h4 id="基本定义-6"><a href="#基本定义-6" class="header-anchor">#</a> 基本定义</h4> <ul><li><p>相对于<a href="/core/database/database_define.html">数据库定义</a>, 表关系定义:从属于多对多[belongs_many_many]</p></li> <li><p>例如示例项目中</p> <ul><li>主数据对象:User</li> <li>从数据对象:Role</li> <li>多对多关系数据对象:Userrole</li> <li>角色[从数据对象]和用户[主数据对象]就是从属于多对多关系</li></ul></li></ul> <h4 id="示例说明-6"><a href="#示例说明-6" class="header-anchor">#</a> 示例说明</h4> <ul><li><p>定义示例:</p> <div class="language- extra-class"><pre class="language-text"><code>class Role extends DataObject {
+    static $belongs_many_many = array(
+        &quot;users&quot; =&gt; &quot;User&quot;
+    );
+</code></pre></div></li> <li><p>调用示例:</p> <div class="language- extra-class"><pre class="language-text"><code>$role  = Role::getById( 1 );
+$users = $role-&gt;users;
+print_r($users);
+</code></pre></div></li></ul> <h2 id="更多说明"><a href="#更多说明" class="header-anchor">#</a> 更多说明</h2> <p>数据对象规格说明定义变量总共就5个,值得说明一下的是这些变量涉及的实现策略和规律总结, 以下对其进行进一步的说明, 有兴趣的朋友可以了解一下</p> <h3 id="数据对象默认关键字定义"><a href="#数据对象默认关键字定义" class="header-anchor">#</a> 数据对象默认关键字定义</h3> <ul><li><p>枚举类名称定义: EnumDataObjectDefaultKeyword</p></li> <li><p>详细定义:</p> <ul><li><p>NAME_FIELD_SPEC:field_spec</p> <p>自定义列规格说明的名称。</p></li> <li><p>NAME_IDNAME_STRATEGY:idname_strategy</p> <p>ID名称定义的策略的名称</p></li> <li><p>NAME_IDNAME_CONCAT:idname_concat</p> <p>ID名称中的连接符的名称</p></li> <li><p>NAME_FOREIGNIDNAME_STRATEGY:foreignid_name_strategy</p> <p>Foreign ID名称定义的策略的名称</p></li> <li><p>NAME_FOREIGNID_CONCAT:foreignid_concat</p> <p>Foreign ID名称中的连接符的名称,Foreign ID名称定义的策略为TABLENAME_ID有效</p></li></ul></li></ul> <h3 id="数据库关联模式"><a href="#数据库关联模式" class="header-anchor">#</a> 数据库关联模式</h3> <ul><li><p>枚举类名称定义: EnumTableRelation</p></li> <li><p>详细定义:</p> <ul><li><p>HAS_ONE:has_one</p> <p>一对一关联</p></li> <li><p>BELONG_HAS_ONE:belong_has_one</p> <p>从属一对一关联, 即主表中一字段关联关系表中的主键</p></li> <li><p>HAS_MANY:has_many</p> <p>一对多关联</p></li> <li><p>MANY_MANY:many_many</p> <p>多对多关联</p></li> <li><p>BELONGS_TO:belongs_many_many</p> <p>从属多对多关联</p></li></ul></li></ul> <h3 id="数据对象默认列定义"><a href="#数据对象默认列定义" class="header-anchor">#</a> 数据对象默认列定义</h3> <ul><li><p>枚举类名称定义: EnumColumnNameDefault</p></li> <li><p>详细定义:</p> <ul><li><p>ID:id</p> <p>数据对象的唯一标识</p></li> <li><p>COMMITTIME:commitTime</p> <p>数据创建的时间</p></li> <li><p>UPDATETIME:updateTime</p> <p>数据最后更新的时间</p></li></ul></li></ul> <h3 id="id名称定义的策略"><a href="#id名称定义的策略" class="header-anchor">#</a> ID名称定义的策略</h3> <ul><li>枚举类名称定义: EnumIDNameStrategy</li> <li>详细定义:
+<ul><li><p>NONE:-1</p> <p>无策略;说明: 需要在数据对象类里定义$field_spec；说明ID别名。</p></li> <li><p>ID:0</p> <p>ID名称为: id</p></li> <li><p>TABLENAMEID:1</p> <p>ID名称为:对象名+'id';如果对象名为User,则ID名称为:userid【头字母大小写均可】</p></li> <li><p>TABLENAME_ID:2</p> <p>ID名称为:对象名+连接符+'id';如果对象名为User,连接符为'_';则ID名称为:user_id【头字母大小写均可】</p></li></ul></li></ul> <h3 id="数据对象列规格默认列定义"><a href="#数据对象列规格默认列定义" class="header-anchor">#</a> 数据对象列规格默认列定义</h3> <ul><li>枚举类名称定义:EnumDataSpec</li> <li>详细定义:
+<ul><li><p>REMOVE:remove</p> <p>数据对象定义中需要移除的列</p></li> <li><p>MANY_MANY_TABLE:many_many_table</p> <p>多对多关系表名称定义, 如无定义, 则按默认规则查找指定表。</p></li> <li><p>FOREIGN_ID:foreign_id</p> <p>数据对象外键名称定义, 如无定义, 则按默认规则查找指定外键。</p></li></ul></li></ul> <h2 id="项目默认配置统一调整"><a href="#项目默认配置统一调整" class="header-anchor">#</a> 项目默认配置统一调整</h2> <ul><li><p>以上配置的使用都定义在文件DataObject.php里, 所有的数据对象都继承它, 默认都采用在该文件中的配置; 作者推荐尽量使用该配置;</p></li> <li><p>如果在实际项目中, 确实需要调整该配置, 可以通过以上配置说明中的值进行定制。</p></li> <li><p>路径   : core/model/</p></li> <li><p>文件名称: DataObject.php</p></li> <li><p>详细定义:</p> <ul><li><p>public static $idname_strategy = EnumIDNameStrategy::TABLENAME_ID;</p> <p>ID名称定义的策略</p></li> <li><p>public static $idname_concat = '_';</p> <p>ID名称中的连接符。ID名称定义的策略为TABLENAME_ID有效。</p></li> <li><p>public static $foreignid_name_strategy = EnumForeignIDNameStrategy::TABLENAME_ID;</p> <p>Foreign ID名称定义的策略</p></li> <li><p>$foreignid_concat = '_';</p> <p>Foreign ID名称中的连接符。Foreign ID名称定义的策略为TABLENAME_ID有效。</p></li></ul></li></ul></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/skygreen2001/betterlife.book/edit/master/docs/core/dataobject/dataobjectspec.md" target="_blank" rel="noopener noreferrer">编辑该页面</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/core/dataobject/" class="prev router-link-active">
+        介绍
+      </a></span> <span class="next"><a href="/core/dataobject/normalmethod.html">
+        通用方法
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.0e326778.js" defer></script><script src="/assets/js/2.79313a8d.js" defer></script><script src="/assets/js/36.11c1e9b4.js" defer></script>
+  </body>
+</html>

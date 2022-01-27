@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>显示层 | Betterlife 学习手册</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="The book of betterlife framework">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.7fad836b.css" as="style"><link rel="preload" href="/assets/js/app.0e326778.js" as="script"><link rel="preload" href="/assets/js/2.79313a8d.js" as="script"><link rel="preload" href="/assets/js/47.d1bba1da.js" as="script"><link rel="prefetch" href="/assets/js/10.e919564c.js"><link rel="prefetch" href="/assets/js/11.57c53c1d.js"><link rel="prefetch" href="/assets/js/12.2dd9d0b6.js"><link rel="prefetch" href="/assets/js/13.72acf1aa.js"><link rel="prefetch" href="/assets/js/14.1ec61390.js"><link rel="prefetch" href="/assets/js/15.1af85902.js"><link rel="prefetch" href="/assets/js/16.e8b60c86.js"><link rel="prefetch" href="/assets/js/17.988ee59a.js"><link rel="prefetch" href="/assets/js/18.18667be7.js"><link rel="prefetch" href="/assets/js/19.38cb53ad.js"><link rel="prefetch" href="/assets/js/20.6dc9022b.js"><link rel="prefetch" href="/assets/js/21.1dd6d819.js"><link rel="prefetch" href="/assets/js/22.5da28586.js"><link rel="prefetch" href="/assets/js/23.70574177.js"><link rel="prefetch" href="/assets/js/24.c4a2dedb.js"><link rel="prefetch" href="/assets/js/25.0925cdaf.js"><link rel="prefetch" href="/assets/js/26.dad01563.js"><link rel="prefetch" href="/assets/js/27.f7c3bc83.js"><link rel="prefetch" href="/assets/js/28.3b5cb38e.js"><link rel="prefetch" href="/assets/js/29.c7da3728.js"><link rel="prefetch" href="/assets/js/3.06c76f20.js"><link rel="prefetch" href="/assets/js/30.c148e416.js"><link rel="prefetch" href="/assets/js/31.5509fb5d.js"><link rel="prefetch" href="/assets/js/32.035caf56.js"><link rel="prefetch" href="/assets/js/33.f74d4676.js"><link rel="prefetch" href="/assets/js/34.8aa9531c.js"><link rel="prefetch" href="/assets/js/35.143240ca.js"><link rel="prefetch" href="/assets/js/36.11c1e9b4.js"><link rel="prefetch" href="/assets/js/37.dd89d0b5.js"><link rel="prefetch" href="/assets/js/38.ce1a9dcc.js"><link rel="prefetch" href="/assets/js/39.29058f39.js"><link rel="prefetch" href="/assets/js/4.633e8bf1.js"><link rel="prefetch" href="/assets/js/40.2d05d2eb.js"><link rel="prefetch" href="/assets/js/41.7a9dd7cb.js"><link rel="prefetch" href="/assets/js/42.fca47b18.js"><link rel="prefetch" href="/assets/js/43.a5dc5b99.js"><link rel="prefetch" href="/assets/js/44.83c7508b.js"><link rel="prefetch" href="/assets/js/45.00a05ce0.js"><link rel="prefetch" href="/assets/js/46.f3852936.js"><link rel="prefetch" href="/assets/js/48.af4223d0.js"><link rel="prefetch" href="/assets/js/49.e7d5a706.js"><link rel="prefetch" href="/assets/js/5.c19791fa.js"><link rel="prefetch" href="/assets/js/50.3951228d.js"><link rel="prefetch" href="/assets/js/51.28574e33.js"><link rel="prefetch" href="/assets/js/52.11e0376e.js"><link rel="prefetch" href="/assets/js/53.f8017839.js"><link rel="prefetch" href="/assets/js/54.7ac48a4b.js"><link rel="prefetch" href="/assets/js/55.4ce4b883.js"><link rel="prefetch" href="/assets/js/56.dac53ff3.js"><link rel="prefetch" href="/assets/js/57.37372255.js"><link rel="prefetch" href="/assets/js/58.d5f93fe2.js"><link rel="prefetch" href="/assets/js/59.5dd66b56.js"><link rel="prefetch" href="/assets/js/6.307cc781.js"><link rel="prefetch" href="/assets/js/60.4a655187.js"><link rel="prefetch" href="/assets/js/61.1fc3cba4.js"><link rel="prefetch" href="/assets/js/62.f9539ba0.js"><link rel="prefetch" href="/assets/js/63.42bf63d5.js"><link rel="prefetch" href="/assets/js/64.e087bd9b.js"><link rel="prefetch" href="/assets/js/65.03a93995.js"><link rel="prefetch" href="/assets/js/66.a29eb216.js"><link rel="prefetch" href="/assets/js/7.15b68a76.js"><link rel="prefetch" href="/assets/js/8.feba17cb.js"><link rel="prefetch" href="/assets/js/9.82d72a56.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7fad836b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Betterlife 学习手册</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/index/" class="nav-link">
+  介绍
+</a></div><div class="nav-item"><a href="/core/" class="nav-link router-link-active">
+  教程
+</a></div><div class="nav-item"><a href="/ace/" class="nav-link">
+  高级
+</a></div><div class="nav-item"><a href="/deploy/" class="nav-link">
+  部署
+</a></div> <a href="https://github.com/skygreen2001/betterlife.book" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/index/" class="nav-link">
+  介绍
+</a></div><div class="nav-item"><a href="/core/" class="nav-link router-link-active">
+  教程
+</a></div><div class="nav-item"><a href="/ace/" class="nav-link">
+  高级
+</a></div><div class="nav-item"><a href="/deploy/" class="nav-link">
+  部署
+</a></div> <a href="https://github.com/skygreen2001/betterlife.book" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/core/" aria-current="page" class="sidebar-link">框架核心</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>原型设计</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据对象</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工具集</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>框架MVC</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/core/mvc/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/core/mvc/model.html" class="sidebar-link">数据模型层</a></li><li><a href="/core/mvc/controller.html" class="sidebar-link">控制器层</a></li><li><a href="/core/mvc/view.html" aria-current="page" class="active sidebar-link">显示层</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/core/mvc/view.html#表示层实现" class="sidebar-link">表示层实现</a></li><li class="sidebar-sub-header"><a href="/core/mvc/view.html#显示层位置" class="sidebar-link">显示层位置</a></li><li class="sidebar-sub-header"><a href="/core/mvc/view.html#打开调试窗口" class="sidebar-link">打开调试窗口</a></li></ul></li><li><a href="/core/mvc/router.html" class="sidebar-link">路由器</a></li><li><a href="/core/mvc/api.html" class="sidebar-link">Api</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>系统工具</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="显示层"><a href="#显示层" class="header-anchor">#</a> 显示层</h1> <ul><li>显示层默认使用PHP阵营最成熟的Smary框架</li> <li>可以在Smarty模板引擎中显示页面tpl文件中直接使用以下通用的变量，它们定义在框架核心文件里：core/main/View.php
+<ul><li>isDev        : 是否本地调试，同Gc::$dev_debug_on配置，如果域名为127.0.0.1、localhost、192.168.开头的设置为本地调试状态</li> <li>url_base     : 网站根路径</li> <li>site_name    : 网站应用的名称,展示给网站用户,一般为中文</li> <li>appName      : 网站应用的名称,网站导航使用,一般为英文</li> <li>template_url : 显示层所在路径，一般前台在home/web应用名/view/default/,后台在home/admin/view/default/</li> <li>templateDir  : 显示层所在物理路径，一般用在smarty模板继承layout地方定义需要用到</li> <li>upload_url   : 上传文件网络路径</li> <li>uploadImg_url: 上传图片定义网络路径</li> <li>encoding     : 网站字符编码,一般为UTF-8或者GBK</li></ul></li></ul> <h2 id="表示层实现"><a href="#表示层实现" class="header-anchor">#</a> 表示层实现</h2> <h3 id="基本实现"><a href="#基本实现" class="header-anchor">#</a> 基本实现</h3> <ul><li><p>框架在开发初期参考Thinkphp，实际整合了三套表示层框架，如下所示：</p> <ul><li>模板: Smarty | Twig
+<ul><li>Smarty</li> <li>Twig</li></ul></li></ul></li> <li><p>在实践中完整验证了Smarty和Twig的通用性，</p></li> <li><p>在未来可能整合的表示层框架:</p> <ul><li>Blade Templates</li></ul></li> <li><p>已废弃使用的模版:</p> <ul><li>SmartTemplate</li> <li>EaseTemplate</li> <li>TemplateLite</li> <li>Flexy【HTML_Template_Flexy】</li></ul></li> <li><p>这些模版在框架中的实现可参考早期的框架，也可以直接移植过来:</p> <ul><li><a href="https://github.com/skygreen2001/betterlife.zero" target="_blank" rel="noopener noreferrer">betterlife.zero<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul> <h3 id="表示层框架切换"><a href="#表示层框架切换" class="header-anchor">#</a> 表示层框架切换</h3> <ul><li><p>表示层框架可从一种切换到另一种。</p></li> <li><p>具体切换的方式示例放在前台显示下: home/betterlife/view/。</p></li> <li><p>框架所有的应用模块表示层默认都使用smarty框架。</p> <ul><li>所有应用模块的表示层默认全局配置在Gc.php(根路径下)，配置如下:<div class="language- extra-class"><pre class="language-text"><code>......
+
+/**
+ * 模板模式
+ * 
+ * 本框架自带四种开源模板支持
+ * 
+ * - 1: Smarty, composer 默认已安装
+ * - 2: Twig 需在 composer.json 配置安装
+ * - 0: 不支持任何模板
+ * 
+ * 默认在这里指定支持其中一种；
+ * 
+ * 若在开发中需要用到多种模板技术,需在使用时通过View进行指定使用
+ * 
+ * 当模板为1:Smarty时，模板的标签写法参考/home/betterlife/view/default/core/blog/display.tpl
+ * @var int
+ * @static
+ */
+public static $template_mode = 1; // View::TEMPLATE_MODE_TWIG;
+
+......
+
+/**
+ * 开发者自定义当前使用模板目录名
+ * 
+ * @example 示例:
+ * 示例如下:
+ * 
+ *     D:\wamp\www\betterlife\home\betterlife\view\default
+ * 
+ *     default即自定义当前使用模板目录名
+ * @var string
+ * @static
+ */
+public static $self_theme_dir = 'default';
+
+......
+
+/**
+ * 模板文件后缀名称
+ * 
+ * 一般为.tpl,.twig,.php,.html,.htm;
+ * 
+ * 一般不支持开源模板的时候，使用.php后缀名；即仍可以使用php语法；但不利于逻辑层和页面设计html代码分离
+ * 
+ * 模板文件一般通用tpl后缀；也有开源模板通常使用html或者htm后缀名；实际上后缀名为任何名称都可以
+ * 
+ * @var string
+ * @static
+ */
+public static $template_file_suffix = '.tpl';
+
+</code></pre></div></li></ul></li> <li><p>前台显示默认配置在Gc.php(根路径下)，配置如下:</p> <div class="language- extra-class"><pre class="language-text"><code>......
+
+/**
+ * 每个模块可以定义自己的模板模式
+ * 
+ * 如果没有定义，则使用$template_mode默认定义的名称，一般都是1:Smarty
+ * @var mixed
+ */
+public static $template_mode_every = array(
+    'betterlife' =&gt; 1,
+);
+
+......
+
+/**
+ * 每个模块可以定义自己显示的模板名
+ * 
+ * 如果没有定义，则使用$self_theme_dir默认定义的名称，一般都是default
+ * 
+ * @var mixed
+ */
+public static $self_theme_dir_every = array(
+    'betterlife' =&gt; 'bootstrap'
+);
+
+......
+
+/**
+ * 每个模块可以定义自己的模板后缀名
+ * 
+ * 如果没有定义，则使用$template_file_suffix默认定义的名称，一般都是.tpl
+ * @var mixed
+ */
+public static $template_file_suffix_every = array(
+    'betterlife' =&gt; '.tpl',
+);
+
+</code></pre></div></li> <li><p>如果将表示层框架从smarty切换成twig</p> <ul><li>修改根路径下的composer.json<div class="language- extra-class"><pre class="language-text"><code>&quot;require&quot;: {
+    ......
+    &quot;twig/twig&quot;          : &quot;^2.0&quot;,
+    ......
+
+</code></pre></div></li> <li>需修改Gc.php(根路径下)，配置如下:<div class="language- extra-class"><pre class="language-text"><code>......
+
+/**
+ * 每个模块可以定义自己的模板模式
+ * 
+ * 如果没有定义，则使用$template_mode默认定义的名称，一般都是1:Smarty
+ * @var mixed
+ */
+public static $template_mode_every = array(
+    'betterlife' =&gt; 2,// View::TEMPLATE_MODE_TWIG
+);
+
+......
+
+/**
+ * 每个模块可以定义自己显示的模板名
+ * 
+ * 如果没有定义，则使用$self_theme_dir默认定义的名称，一般都是default
+ * 
+ * @var mixed
+ */
+public static $self_theme_dir_every = array(
+    'betterlife' =&gt; 'twig'
+);
+
+......
+
+/**
+ * 每个模块可以定义自己的模板后缀名
+ * 
+ * 如果没有定义，则使用$template_file_suffix默认定义的名称，一般都是.tpl
+ * @var mixed
+ */
+public static $template_file_suffix_every = array(
+    'betterlife' =&gt; '.twig',
+);
+
+</code></pre></div></li></ul></li></ul> <h2 id="显示层位置"><a href="#显示层位置" class="header-anchor">#</a> 显示层位置</h2> <h3 id="后台管理-home-admin-view"><a href="#后台管理-home-admin-view" class="header-anchor">#</a> 后台管理: home/admin/view</h3> <ul><li>默认在default目录下</li></ul> <h3 id="前台显示-home-betterlife-view"><a href="#前台显示-home-betterlife-view" class="header-anchor">#</a> 前台显示: home/betterlife/view/</h3> <ul><li>默认在bootstrap目录下<div class="language- extra-class"><pre class="language-text"><code>/**
+ * 每个模块可以定义自己显示的模板名
+ * 如果没有定义，则使用$self_theme_dir默认定义的名称，一般都是default
+ * @var mixed
+ */
+public static $self_theme_dir_every=array(
+    'betterlife'=&gt;'bootstrap'
+);
+可通过设置Gc.php里的$self_theme_dir_every的bootstrap为default即可设置回默认default样式。
+public static $self_theme_dir_every=array(
+    'betterlife'=&gt;'default'
+);
+</code></pre></div></li></ul> <h3 id="通用模版显示-home-model-view"><a href="#通用模版显示-home-model-view" class="header-anchor">#</a> 通用模版显示:home/model/view/</h3> <ul><li>默认在default目录下</li></ul> <h2 id="打开调试窗口"><a href="#打开调试窗口" class="header-anchor">#</a> 打开调试窗口</h2> <ul><li><p>如果在mvc框架中表示层使用了smarty框架,可在Gc.php文件里调整以下配置进行调试。</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 是否打开Smarty Debug Console窗口
+ * @var bool
+ * @static
+ */
+public static $dev_smarty_on = false;
+</code></pre></div></li></ul></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/skygreen2001/betterlife.book/edit/master/docs/core/mvc/view.md" target="_blank" rel="noopener noreferrer">编辑该页面</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/core/mvc/controller.html" class="prev">
+        控制器层
+      </a></span> <span class="next"><a href="/core/mvc/router.html">
+        路由器
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.0e326778.js" defer></script><script src="/assets/js/2.79313a8d.js" defer></script><script src="/assets/js/47.d1bba1da.js" defer></script>
+  </body>
+</html>

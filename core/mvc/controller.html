@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>控制器层 | Betterlife 学习手册</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="The book of betterlife framework">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.7fad836b.css" as="style"><link rel="preload" href="/assets/js/app.0e326778.js" as="script"><link rel="preload" href="/assets/js/2.79313a8d.js" as="script"><link rel="preload" href="/assets/js/44.83c7508b.js" as="script"><link rel="prefetch" href="/assets/js/10.e919564c.js"><link rel="prefetch" href="/assets/js/11.57c53c1d.js"><link rel="prefetch" href="/assets/js/12.2dd9d0b6.js"><link rel="prefetch" href="/assets/js/13.72acf1aa.js"><link rel="prefetch" href="/assets/js/14.1ec61390.js"><link rel="prefetch" href="/assets/js/15.1af85902.js"><link rel="prefetch" href="/assets/js/16.e8b60c86.js"><link rel="prefetch" href="/assets/js/17.988ee59a.js"><link rel="prefetch" href="/assets/js/18.18667be7.js"><link rel="prefetch" href="/assets/js/19.38cb53ad.js"><link rel="prefetch" href="/assets/js/20.6dc9022b.js"><link rel="prefetch" href="/assets/js/21.1dd6d819.js"><link rel="prefetch" href="/assets/js/22.5da28586.js"><link rel="prefetch" href="/assets/js/23.70574177.js"><link rel="prefetch" href="/assets/js/24.c4a2dedb.js"><link rel="prefetch" href="/assets/js/25.0925cdaf.js"><link rel="prefetch" href="/assets/js/26.dad01563.js"><link rel="prefetch" href="/assets/js/27.f7c3bc83.js"><link rel="prefetch" href="/assets/js/28.3b5cb38e.js"><link rel="prefetch" href="/assets/js/29.c7da3728.js"><link rel="prefetch" href="/assets/js/3.06c76f20.js"><link rel="prefetch" href="/assets/js/30.c148e416.js"><link rel="prefetch" href="/assets/js/31.5509fb5d.js"><link rel="prefetch" href="/assets/js/32.035caf56.js"><link rel="prefetch" href="/assets/js/33.f74d4676.js"><link rel="prefetch" href="/assets/js/34.8aa9531c.js"><link rel="prefetch" href="/assets/js/35.143240ca.js"><link rel="prefetch" href="/assets/js/36.11c1e9b4.js"><link rel="prefetch" href="/assets/js/37.dd89d0b5.js"><link rel="prefetch" href="/assets/js/38.ce1a9dcc.js"><link rel="prefetch" href="/assets/js/39.29058f39.js"><link rel="prefetch" href="/assets/js/4.633e8bf1.js"><link rel="prefetch" href="/assets/js/40.2d05d2eb.js"><link rel="prefetch" href="/assets/js/41.7a9dd7cb.js"><link rel="prefetch" href="/assets/js/42.fca47b18.js"><link rel="prefetch" href="/assets/js/43.a5dc5b99.js"><link rel="prefetch" href="/assets/js/45.00a05ce0.js"><link rel="prefetch" href="/assets/js/46.f3852936.js"><link rel="prefetch" href="/assets/js/47.d1bba1da.js"><link rel="prefetch" href="/assets/js/48.af4223d0.js"><link rel="prefetch" href="/assets/js/49.e7d5a706.js"><link rel="prefetch" href="/assets/js/5.c19791fa.js"><link rel="prefetch" href="/assets/js/50.3951228d.js"><link rel="prefetch" href="/assets/js/51.28574e33.js"><link rel="prefetch" href="/assets/js/52.11e0376e.js"><link rel="prefetch" href="/assets/js/53.f8017839.js"><link rel="prefetch" href="/assets/js/54.7ac48a4b.js"><link rel="prefetch" href="/assets/js/55.4ce4b883.js"><link rel="prefetch" href="/assets/js/56.dac53ff3.js"><link rel="prefetch" href="/assets/js/57.37372255.js"><link rel="prefetch" href="/assets/js/58.d5f93fe2.js"><link rel="prefetch" href="/assets/js/59.5dd66b56.js"><link rel="prefetch" href="/assets/js/6.307cc781.js"><link rel="prefetch" href="/assets/js/60.4a655187.js"><link rel="prefetch" href="/assets/js/61.1fc3cba4.js"><link rel="prefetch" href="/assets/js/62.f9539ba0.js"><link rel="prefetch" href="/assets/js/63.42bf63d5.js"><link rel="prefetch" href="/assets/js/64.e087bd9b.js"><link rel="prefetch" href="/assets/js/65.03a93995.js"><link rel="prefetch" href="/assets/js/66.a29eb216.js"><link rel="prefetch" href="/assets/js/7.15b68a76.js"><link rel="prefetch" href="/assets/js/8.feba17cb.js"><link rel="prefetch" href="/assets/js/9.82d72a56.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7fad836b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Betterlife 学习手册</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/index/" class="nav-link">
+  介绍
+</a></div><div class="nav-item"><a href="/core/" class="nav-link router-link-active">
+  教程
+</a></div><div class="nav-item"><a href="/ace/" class="nav-link">
+  高级
+</a></div><div class="nav-item"><a href="/deploy/" class="nav-link">
+  部署
+</a></div> <a href="https://github.com/skygreen2001/betterlife.book" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/index/" class="nav-link">
+  介绍
+</a></div><div class="nav-item"><a href="/core/" class="nav-link router-link-active">
+  教程
+</a></div><div class="nav-item"><a href="/ace/" class="nav-link">
+  高级
+</a></div><div class="nav-item"><a href="/deploy/" class="nav-link">
+  部署
+</a></div> <a href="https://github.com/skygreen2001/betterlife.book" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/core/" aria-current="page" class="sidebar-link">框架核心</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>原型设计</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据对象</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工具集</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>框架MVC</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/core/mvc/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/core/mvc/model.html" class="sidebar-link">数据模型层</a></li><li><a href="/core/mvc/controller.html" aria-current="page" class="active sidebar-link">控制器层</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/core/mvc/controller.html#所有控制器父类" class="sidebar-link">所有控制器父类</a></li><li class="sidebar-sub-header"><a href="/core/mvc/controller.html#前台控制器父类" class="sidebar-link">前台控制器父类</a></li><li class="sidebar-sub-header"><a href="/core/mvc/controller.html#后台控制器父类" class="sidebar-link">后台控制器父类</a></li><li class="sidebar-sub-header"><a href="/core/mvc/controller.html#通用模版控制器父类" class="sidebar-link">通用模版控制器父类</a></li><li class="sidebar-sub-header"><a href="/core/mvc/controller.html#报表控制器父类" class="sidebar-link">报表控制器父类</a></li><li class="sidebar-sub-header"><a href="/core/mvc/controller.html#控制器常用变量" class="sidebar-link">控制器常用变量</a></li><li class="sidebar-sub-header"><a href="/core/mvc/controller.html#控制器常用方法" class="sidebar-link">控制器常用方法</a></li><li class="sidebar-sub-header"><a href="/core/mvc/controller.html#控制器定义表示层对象" class="sidebar-link">控制器定义表示层对象</a></li><li class="sidebar-sub-header"><a href="/core/mvc/controller.html#自定义目录" class="sidebar-link">自定义目录</a></li><li class="sidebar-sub-header"><a href="/core/mvc/controller.html#跳转redirect" class="sidebar-link">跳转Redirect</a></li></ul></li><li><a href="/core/mvc/view.html" class="sidebar-link">显示层</a></li><li><a href="/core/mvc/router.html" class="sidebar-link">路由器</a></li><li><a href="/core/mvc/api.html" class="sidebar-link">Api</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>系统工具</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="控制器层"><a href="#控制器层" class="header-anchor">#</a> 控制器层</h1> <h2 id="所有控制器父类"><a href="#所有控制器父类" class="header-anchor">#</a> 所有控制器父类</h2> <ul><li><p>路径   :core/model/</p></li> <li><p>文件名称: ActionBasic.php</p></li> <li><p>github路径:  <a href="https://github.com/skygreen2001/betterlife/blob/master/core/model/ActionBasic.php" target="_blank" rel="noopener noreferrer">https://github.com/skygreen2001/betterlife/blob/master/core/model/ActionBasic.php<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li> <li><p>每个控制器都继承自它，它是所有控制器的父类；规范要求：所有控制器要求的前缀:Action_;</p></li> <li><p>在Action所有的方法执行之前可以执行的方法: beforeAction</p> <ul><li><p>示例: 所有网站的head部分的title和description赋值</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">keywords</span>    <span class="token operator">=</span> <span class="token class-name static-context">Gc</span><span class="token operator">::</span><span class="token variable">$site_name</span><span class="token punctuation">;</span>
+<span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">description</span> <span class="token operator">=</span> <span class="token class-name static-context">Gc</span><span class="token operator">::</span><span class="token variable">$site_name</span><span class="token punctuation">;</span>
+</code></pre></div></li> <li><p>示例: Action的变量可以被覆盖重载，如来自前端的控制器文件: home/betterlife/action/Action_Blog.php</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">keywords</span>    <span class="token operator">.=</span> <span class="token string double-quoted-string">&quot;-博客&quot;</span><span class="token punctuation">;</span>
+<span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">description</span> <span class="token operator">.=</span> <span class="token string double-quoted-string">&quot;-显示博客列表&quot;</span><span class="token punctuation">;</span>
+</code></pre></div></li></ul></li> <li><p>在Action所有的方法执行之后可以执行的方法: afterAction</p> <ul><li>示例: 所有网站的head部分的title和description显示在页面的变量里<div class="language-php extra-class"><pre class="language-php"><code>  <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">view</span><span class="token operator">-&gt;</span><span class="token function">set</span><span class="token punctuation">(</span> <span class="token string double-quoted-string">&quot;keywords&quot;</span><span class="token punctuation">,</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">keywords</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">view</span><span class="token operator">-&gt;</span><span class="token function">set</span><span class="token punctuation">(</span> <span class="token string double-quoted-string">&quot;description&quot;</span><span class="token punctuation">,</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">description</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li> <li>示例页面在文件: home/betterlife/view/default/layout/normal/header.tpl<div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>keywords<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{$keywords}<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>description<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{$description}<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre></div></li></ul></li></ul> <h2 id="前台控制器父类"><a href="#前台控制器父类" class="header-anchor">#</a> 前台控制器父类</h2> <ul><li>路径   : home/betterlife/action/</li> <li>文件名称: Action.php</li> <li>父类   : ActionBasic.php</li></ul> <h2 id="后台控制器父类"><a href="#后台控制器父类" class="header-anchor">#</a> 后台控制器父类</h2> <ul><li>路径   : home/admin/action/</li> <li>文件名称: ActionAdmin.php</li> <li>父类   : ActionBasic.php</li></ul> <h2 id="通用模版控制器父类"><a href="#通用模版控制器父类" class="header-anchor">#</a> 通用模版控制器父类</h2> <ul><li>路径   : home/model/action/</li> <li>文件名称: ActionModel.php</li> <li>父类   : ActionBasic.php</li></ul> <h2 id="报表控制器父类"><a href="#报表控制器父类" class="header-anchor">#</a> 报表控制器父类</h2> <ul><li>路径   : home/report/action/</li> <li>文件名称: ActionReport.php</li> <li>父类   : ActionBasic.php</li></ul> <h2 id="控制器常用变量"><a href="#控制器常用变量" class="header-anchor">#</a> 控制器常用变量</h2> <ul><li><p>控制器默认属性: data</p> <ul><li><p>前端请求的变量都汇总到这个变量下</p></li> <li><p>$this-&gt;data = $_GET 和 $_POST的变量的合并;</p></li> <li><p>代码示例如下:</p> <ul><li>如url: http://localhost/betterlife/index.php?go=admin.blog.view&amp;id=3</li></ul> <div class="language-php extra-class"><pre class="language-php"><code><span class="token variable">$blog_id</span> <span class="token operator">=</span> @<span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">data</span><span class="token punctuation">[</span><span class="token string double-quoted-string">&quot;id&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
+</code></pre></div></li></ul></li> <li><p>控制器默认属性: view</p> <ul><li><p>所有Web应用模块下的控制器都遵循这个规则，拥有这个变量</p></li> <li><p>所有需要显示到页面的数据变量都应该挂在它下面</p></li> <li><p>显示层的变量可以用set方法: $this-&gt;view-&gt;set( $var, $value )赋值</p></li> <li><p>代码示例来自: core/model/Action_Basic.php</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">view</span><span class="token operator">-&gt;</span><span class="token function">set</span><span class="token punctuation">(</span> <span class="token string double-quoted-string">&quot;keywords&quot;</span><span class="token punctuation">,</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">keywords</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">view</span><span class="token operator">-&gt;</span><span class="token function">set</span><span class="token punctuation">(</span> <span class="token string double-quoted-string">&quot;description&quot;</span><span class="token punctuation">,</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">description</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li> <li><p>显示层的变量可以用属性: $this-&gt;view-&gt;{ $var } = $value 赋值</p></li> <li><p>代码示例来自: home/betterlife/action/Action_Blog.php</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">view</span><span class="token operator">-&gt;</span><span class="token property">message</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;博客提交成功&quot;</span><span class="token punctuation">;</span>
+<span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">view</span><span class="token operator">-&gt;</span><span class="token property">color</span>   <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;green&quot;</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code>......
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>font</span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{$color}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{$message|nl2br|default:''}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>font</span><span class="token punctuation">&gt;</span></span>
+......
+</code></pre></div></li></ul></li></ul> <h2 id="控制器常用方法"><a href="#控制器常用方法" class="header-anchor">#</a> 控制器常用方法</h2> <ul><li><p>上传图片文件: uploadImg</p> <ul><li>调用示例:<div class="language-php extra-class"><pre class="language-php"><code><span class="token variable">$result</span> <span class="token operator">=</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token function">uploadImg</span><span class="token punctuation">(</span><span class="token variable">$_FILES</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">&quot;icon_url&quot;</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">&quot;icon_url&quot;</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">&quot;blog&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token function">uploadImg</span><span class="token punctuation">(</span><span class="token variable">$_FILES</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">&quot;icon_url&quot;</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">&quot;subdir&quot;</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">&quot;test.png&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li> <li>定义:<div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">/**
+ * 上传图片文件
+ * @param array  $files 上传的文件对象
+ * @param string $uploadFlag 上传标识,上传文件的input组件的名称
+ * @param string $upload_dir 上传文件存储的所在目录[最后一级目录，一般对应图片列名称]
+ * @param string $defaultId 上传文件所在的目录标识，一般为类实例名称; 如果包含有 . 则为指定文件名, 文件名后缀名会自动修改为上传文件的后缀名.
+ * @param int    $file_permit_upload_size 允许上传的文件尺寸大小: 默认10M
+ * @param boolean $is_permit_same_filename 是否允许用同一个名字
+ * @return array 图片存储路径等信息
+ * 
+ *   - 返回数组key定义
+ *     - success  : 是否操作成功
+ *     - file_name: 文件存储根路径upload/images的相对路径 
+ * 
+ * @Example
+ *     - $this-&gt;uploadImg($_FILES, &quot;icon_url&quot;, &quot;icon_url&quot;, &quot;blog&quot;);
+ * 
+ *       [说明] 生成的图片会是 images/blog/icon_url/201806011225.png  类似的路径
+ * 
+ *     - $this-&gt;uploadImg($_FILES, &quot;icon_url&quot;, &quot;subdir&quot;, &quot;test.png&quot;);
+ * 
+ *       [说明] 生成的图片会是 images/subdir/test.png  类似的路径
+ * 
+ *             如果上传文件为jpg后缀名，则会是 images/subdir/test.jpg  类似的路径
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">uploadImg</span><span class="token punctuation">(</span><span class="token variable">$files</span><span class="token punctuation">,</span> <span class="token variable">$uploadFlag</span><span class="token punctuation">,</span> <span class="token variable">$upload_dir</span><span class="token punctuation">,</span> <span class="token variable">$defaultId</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;default&quot;</span><span class="token punctuation">,</span> <span class="token variable">$file_permit_upload_size</span> <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token variable">$is_permit_same_filename</span> <span class="token operator">=</span> <span class="token constant boolean">false</span><span class="token punctuation">)</span> 
+
+</code></pre></div></li></ul></li> <li><p>上传多个图片文件: uploadImg</p> <ul><li>调用示例:<div class="language-php extra-class"><pre class="language-php"><code><span class="token variable">$result</span> <span class="token operator">=</span> <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token function">uploadImgs</span><span class="token punctuation">(</span><span class="token variable">$_FILES</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">&quot;icon_url&quot;</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">&quot;icon_url&quot;</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">&quot;blog&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token function">uploadImg</span><span class="token punctuation">(</span><span class="token variable">$_FILES</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">&quot;icon_url&quot;</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">&quot;subdir&quot;</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">&quot;test.png&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li> <li>定义:<div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">/**
+ * 上传多个图片文件
+ * @param array $files 上传多个文件的对象
+ * @param array $uploadFlag 上传标识,上传文件的input组件的名称
+ * @param array $upload_dir 上传文件存储的所在目录[最后一级目录，一般对应图片列名称]
+ * @param array $defaultId 上传文件所在的目录标识，一般为类实例名称; 如果包含有 . 则为指定文件名, 文件名后缀名会自动修改为上传文件的后缀名.
+ * @param array $isReturnAll 是否返回所有值，当多个图片文件上传，有的是空的，是否也返回空；保证传入和返回的数组数量相等
+ * @return array 图片存储路径等信息
+ * 
+ *   - 返回数组key定义
+ *     - success    : 是否操作成功
+ *     - file_name[]: 数组, 多个文件存储根路径upload/images的相对路径 
+ * 
+ * @Example
+ *     - $this-&gt;uploadImgs($_FILES, &quot;icon_url&quot;, &quot;icon_url&quot;, &quot;blog&quot;);
+ *       [说明] 生成的图片会是 images/blog/icon_url/201806011225.png  类似的路径
+ *     - $this-&gt;-&gt;uploadImgs($_FILES, &quot;icon_url&quot;, &quot;subdir&quot;, &quot;test.png&quot;);
+ *       [说明] 生成的图片会是 images/subdir/test.png  类似的路径
+ *             如果上传文件为jpg后缀名，则会是 images/subdir/test.jpg  类似的路径
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">uploadImgs</span><span class="token punctuation">(</span><span class="token variable">$files</span><span class="token punctuation">,</span> <span class="token variable">$uploadFlag</span><span class="token punctuation">,</span> <span class="token variable">$upload_dir</span><span class="token punctuation">,</span> <span class="token variable">$defaultId</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;default&quot;</span><span class="token punctuation">,</span> <span class="token variable">$file_permit_upload_size</span> <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token variable">$isReturnAll</span> <span class="token operator">=</span> <span class="token constant boolean">false</span><span class="token punctuation">)</span>
+
+</code></pre></div></li></ul></li> <li><p>加载在线编辑器: load_onlineditor</p> <ul><li><p>可供选择的集成在线编辑器:</p> <ul><li>UEditor</li> <li>CKEditor</li> <li>KindEditor</li> <li>xhEditor</li></ul></li> <li><p>默认集成在线编辑器:UEditor</p></li> <li><p>调用示例: $this-&gt;load_onlineditor( &quot;blog_content&quot; );</p></li> <li><p>定义:</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">/**
+ * 加载在线编辑器
+ * @param array|string $textarea_ids Input为Textarea的名称name[一个页面可以有多个Textarea]
+ * @return void
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">load_onlineditor</span><span class="token punctuation">(</span><span class="token variable">$textarea_ids</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;content&quot;</span><span class="token punctuation">)</span>
+</code></pre></div></li> <li><p>该方法应配合页面使用</p></li> <li><p>页面示例:</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token punctuation">{</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$online_editor</span> <span class="token operator">==</span> <span class="token string single-quoted-string">'UEditor'</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+      $<span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span> typeof <span class="token constant">UE</span> <span class="token operator">!=</span> <span class="token string single-quoted-string">'undefined'</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">pageInit_ue_blog_content</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+          <span class="token comment">// 在线编辑器设置默认样式</span>
+          ue_blog_content<span class="token operator">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      
+              <span class="token constant">UE</span><span class="token operator">.</span>dom<span class="token operator">.</span>domUtils<span class="token operator">.</span><span class="token function">setStyles</span><span class="token punctuation">(</span>ue_blog_content<span class="token operator">.</span>body<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                  <span class="token string single-quoted-string">'background-color'</span><span class="token punctuation">:</span> <span class="token string single-quoted-string">'#4caf50'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'color'</span><span class="token punctuation">:</span> <span class="token string single-quoted-string">'#fff'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'font-family'</span> <span class="token punctuation">:</span> <span class="token string double-quoted-string">&quot;'Microsoft Yahei','Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif&quot;</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'font-size'</span> <span class="token punctuation">:</span> <span class="token string single-quoted-string">'16px'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            
+          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span><span class="token operator">/</span><span class="token keyword">if</span><span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>在<a href="/core/database/">数据库原型设计规范</a>中定义的[大数据, 需TextArea输入大文本列定义规则]，可用<a href="/ace/autocode/">代码生成器</a>自动生成所有代码。</p></li></ul></li> <li><p>加载通用的Javascript库: loadJs</p> <ul><li>调用示例: $this-&gt;loadJs( &quot;js/edit.js&quot; );</li> <li>一般js文件引用是在文件里完成的，框架也提供了在控制器里引用Js文件的功能</li> <li>定义:<div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">/**
+ * 加载通用的Javascript库
+ * 
+ * 默认:当前模板目录下:js/index.js
+ * 
+ * @param string $defaultJsFile 默认需加载JS文件
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">loadJs</span><span class="token punctuation">(</span><span class="token variable">$defaultJsFile</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;js/index.js&quot;</span><span class="token punctuation">)</span>
+</code></pre></div></li> <li>页面引用一般放在文件: home/{module}/view/{theme_dir}/layout/normal/layout.tpl
+<ul><li>如module前端theme是default  : home/betterlife/view/default/layout/normal/layout.tpl</li> <li>如module前端theme是bootstrap: home/betterlife/view/bootstrap/layout/normal/layout.tpl</li> <li>如module后端theme是default  : home/admin/view/default/layout/normal/layout.tpl</li> <li>页面引用示例:<div class="language-html extra-class"><pre class="language-html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zh-CN<span class="token punctuation">&quot;</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>index<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+  ......
+  {$viewObject-&gt;js_ready|default:&quot;&quot;}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></li> <li>也可以根据需要在页面的最后引用，需注意这是全局的，即所有页面都会因用它；</li> <li>示例在文件: home/admin/view/default/layout/normal/layout.tpl<div class="language-html extra-class"><pre class="language-html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zh-CN<span class="token punctuation">&quot;</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>index<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+  ......
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  ......
+  {$viewObject-&gt;js_ready|default:&quot;&quot;}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></li></ul> 
+  ```
+</li></ul></li> <li><p>加载通用的Css文件: loadCss</p> <ul><li>调用示例: $this-&gt;loadCss( &quot;resources/css/edit.css&quot; );</li> <li>一般css文件引用是在文件里完成的，框架也提供了在控制器里引用css文件的功能</li> <li>定义:<div class="language-php extra-class"><pre class="language-php"><code><span class="token comment">/**
+ * 加载通用的Css
+ * 
+ * 默认:当前模板目录下:resources/css/index.css
+ * @param string $defaultCssFile 引用的css文件
+ * @return void
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">loadCss</span><span class="token punctuation">(</span><span class="token variable">$defaultCssFile</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;resources/css/index.css&quot;</span><span class="token punctuation">)</span>
+</code></pre></div></li> <li>页面引用一般放在文件: home/{module}/view/{theme_dir}/layout/normal/layout.tpl
+<ul><li>如module前端theme是default  : home/betterlife/view/default/layout/normal/layout.tpl</li> <li>如module前端theme是bootstrap: home/betterlife/view/bootstrap/layout/normal/layout.tpl</li> <li>如module后端theme是default  : home/admin/view/default/layout/normal/layout.tpl</li> <li>页面引用示例:<div class="language-html extra-class"><pre class="language-html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zh-CN<span class="token punctuation">&quot;</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>index<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+  ......
+  {$viewObject-&gt;css_ready|default:&quot;&quot;}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></li></ul></li></ul></li></ul> <h2 id="控制器定义表示层对象"><a href="#控制器定义表示层对象" class="header-anchor">#</a> 控制器定义表示层对象</h2> <ul><li><p>控制器默认属性: viewObject</p></li> <li><p>该属性挂在控制器默认属性: view 下</p></li> <li><p>在控制器类里可以定义表示层显示对象类继承自ViewObject</p></li> <li><p>表示层显示对象可以直接输出显示</p></li> <li><p>表示层对象方法需挂在在显示层页面里应挂在该对象变量下</p></li> <li><p>代码示例来自: home/betterlife/action/Action_Blog.php</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">Action_Blog</span> <span class="token keyword">extends</span> <span class="token class-name">Action</span>
+<span class="token punctuation">{</span>
+
+    <span class="token operator">...</span><span class="token operator">...</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token operator">...</span><span class="token operator">...</span>
+
+        <span class="token variable">$view</span>                   <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">View_Blog</span><span class="token punctuation">(</span><span class="token variable">$this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token variable">$view</span><span class="token operator">-&gt;</span><span class="token property">blogs</span>            <span class="token operator">=</span> <span class="token variable">$blogs</span><span class="token punctuation">;</span>
+        <span class="token variable">$view</span><span class="token operator">-&gt;</span><span class="token property">countBlogs</span>       <span class="token operator">=</span> <span class="token variable">$count</span><span class="token punctuation">;</span>
+        <span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">view</span><span class="token operator">-&gt;</span><span class="token property">viewObject</span> <span class="token operator">=</span> <span class="token variable">$view</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ *  Blog表示层对象
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">View_Blog</span> <span class="token keyword">extends</span> <span class="token class-name">ViewObject</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token variable">$blog</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token variable">$blogs</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token variable">$countBlogs</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">count_comments</span><span class="token punctuation">(</span><span class="token variable">$blog_id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name static-context">Comment</span><span class="token operator">::</span><span class="token function">count</span><span class="token punctuation">(</span> <span class="token string double-quoted-string">&quot;blog_id=&quot;</span> <span class="token operator">.</span> <span class="token variable">$blog_id</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></code></pre></div><div class="language-html extra-class"><pre class="language-html"><code>......
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">&gt;</span></span>共计{$countBlogs} 篇博客<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">&gt;</span></span>
+    {if $blogs}
+    {foreach item=blog from=$blogs}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>blog{$blog.blog_id}<span class="token punctuation">'</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>block<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        ......
+        评论数:{$viewObject-&gt;count_comments($blog.blog_id)}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+......
+</code></pre></div></li></ul> <h2 id="自定义目录"><a href="#自定义目录" class="header-anchor">#</a> 自定义目录</h2> <ul><li><p>渲染页面指定自定义目录</p></li> <li><p>按默认导航路由规则，页面层级都为1层，即 controller / action . [模版页面后缀名]</p> <ul><li>如: http://www.bb.com/index.php?go=betterlife.auth.login
+<ul><li>表示层页面在目录: home/betterlife/view/bootstrap/core/</li> <li>对应规则是 <code>controller / action . [模版页面后缀名]</code> : auth/login.tpl</li> <li>对应目录: auth (controller: 只有一层)</li> <li>对应页面: login.tpl (action . [模版页面后缀名]: login . [tpl])</li></ul></li></ul></li> <li><p>表示层页面层级可超过1层, 层数不限，不推荐，但有时候确实有这种需求，支持这种功能</p> <ul><li>指定控制器指定函数方法最后添加代码规则如下:
+<ul><li>$this-&gt;view-&gt;atPage($dirPath, $filename);</li></ul></li> <li>如: http://www.bb.com/index.php?go=betterlife.auth.login</li> <li>模版文件仍然必须在home/betterlife/view/bootstrap/core目录下</li> <li>如果模版文件在目录 a/b/c 下，文件是 p.tpl</li> <li>那么文件的全路径是: home/betterlife/view/bootstrap/core/a/b/c/p.tpl</li> <li>在控制器 <code>Action_Auth</code> 的函数方法 <code>public function login()</code> 里的最后添加代码<div class="language-php extra-class"><pre class="language-php"><code><span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">view</span><span class="token operator">-&gt;</span><span class="token function">atPage</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'a/b/c'</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">&quot;p&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+或
+<span class="token variable">$this</span><span class="token operator">-&gt;</span><span class="token property">view</span><span class="token operator">-&gt;</span><span class="token function">atPage</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'a.b.c'</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">&quot;p&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li> <li>目录名称不能含有<code>.</code></li></ul></li> <li><p>如果<code>$filename</code>不传参数，如:</p> <div class="language- extra-class"><pre class="language-text"><code>$this-&gt;view-&gt;atPage('a/b/c');
+或
+$this-&gt;view-&gt;atPage('a.b.c');
+</code></pre></div><ul><li>则模版文件默认是<code>action</code>名称, 为: login.tpl, 在目录: a/b/c 下</li> <li>文件的全路径是: home/betterlife/view/bootstrap/core/a/b/c/login.tpl</li></ul></li> <li><p>该方法 定义在[core/main/View.php]文件里</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+<span class="token comment">/**
+ * 自定义模版文件所在目录路径
+ *
+ * 指定页面目录路径
+ *
+ * @param string $dirPath 模版文件所在模版目录下的相对路径
+ * @param string $filename 文件名, 不需要文件名后缀名
+ *                         如果没有传递该参数，则为`action`名称
+ * @return void
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">atPage</span><span class="token punctuation">(</span><span class="token variable">$dirPath</span><span class="token punctuation">,</span> <span class="token variable">$filename</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;&quot;</span><span class="token punctuation">)</span>
+</span></code></pre></div></li></ul> <h2 id="跳转redirect"><a href="#跳转redirect" class="header-anchor">#</a> 跳转Redirect</h2> <ul><li><p>以下的 redirect 和 go 是通用的功能，可以理解 go 是 redirect 的别名。</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+<span class="token comment">/**
+ * 内部转向到另一网页地址
+ *
+ * @param mixed $action
+ * @param mixed $method
+ * @param array|string $querystringparam
+ * 示例：
+ *     index.php?go=betterlife.blog.write&amp;pageNo=8&amp;userId=5
+ *     $action：blog
+ *     $method：write
+ *     $querystring：pageNo=8&amp;userId=5
+ *                   array('pageNo'=&gt;8,'userId'=&gt;5)
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">redirect</span><span class="token punctuation">(</span><span class="token variable">$action</span><span class="token punctuation">,</span> <span class="token variable">$method</span><span class="token punctuation">,</span> <span class="token variable">$querystring</span><span class="token operator">=</span><span class="token string double-quoted-string">&quot;&quot;</span><span class="token punctuation">)</span>
+
+<span class="token comment">/**
+ * 内部转向到另一网页地址
+ *
+ * @param mixed $action
+ * @param mixed $method
+ * @param array|string $querystringparam
+ * 示例：
+ *     index.php?go=betterlife.blog.write&amp;pageNo=8&amp;userId=5
+ *     $action：blog
+ *     $method：write
+ *     $querystring：pageNo=8&amp;userId=5
+ *                   array('pageNo'=&gt;8,'userId'=&gt;5)
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">go</span><span class="token punctuation">(</span><span class="token variable">$action</span><span class="token punctuation">,</span> <span class="token variable">$method</span><span class="token punctuation">,</span> <span class="token variable">$querystring</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;&quot;</span><span class="token punctuation">)</span>
+</span></code></pre></div></li> <li><p>以下的 redirect_url 是跳转网络url全路径。</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+<span class="token comment">/**
+ * 内部转向到指定网页地址
+ * @param mixed $url URL完整路径包括querystring
+ * @link http://localhost/betterlife/index.php?g=betterlife&amp;m=blog&amp;a=display&amp;pageNo=8
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">redirect_url</span><span class="token punctuation">(</span><span class="token variable">$url</span><span class="token punctuation">)</span>
+</span></code></pre></div></li></ul></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/skygreen2001/betterlife.book/edit/master/docs/core/mvc/controller.md" target="_blank" rel="noopener noreferrer">编辑该页面</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/core/mvc/model.html" class="prev">
+        数据模型层
+      </a></span> <span class="next"><a href="/core/mvc/view.html">
+        显示层
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.0e326778.js" defer></script><script src="/assets/js/2.79313a8d.js" defer></script><script src="/assets/js/44.83c7508b.js" defer></script>
+  </body>
+</html>
